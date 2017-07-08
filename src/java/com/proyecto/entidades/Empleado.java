@@ -27,13 +27,21 @@ public class Empleado implements Serializable {
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "CODIGO_EMPLEADO")
     private Long CODIGO_EMPLEADO;
+    @Column(name = "CODIGO_PAIS")
     private Long CODIGO_PAIS;
+    @Column(name = "CODIGO_TIPDOC")
     private Long CODIGO_TIPDOC;
+    @Column(name = "NRO_DOC")
     private String NRO_DOC;
+    @Column(name = "APELLIDO_PATERNO")
     private String APELLIDO_PATERNO;
+    @Column(name = "APELLIDO_MATERNO")
     private String APELLIDO_MATERNO;
+    @Column(name = "NOMBRES")
     private String NOMBRES;
+    @Column(name = "FECHA_NACIMIENTO")
     private Date FECHA_NACIMIENTO;
+    @Column(name = "DOMICILIO")
     private String DOMICILIO;
 
     public Long getCODIGO_EMPLEADO() {
@@ -120,7 +128,7 @@ public class Empleado implements Serializable {
     @Override
     public int hashCode() {
         int hash = 0;
-        hash += (id != null ? id.hashCode() : 0);
+        hash += (CODIGO_EMPLEADO != null ? CODIGO_EMPLEADO.hashCode() : 0);
         return hash;
     }
 
@@ -131,7 +139,7 @@ public class Empleado implements Serializable {
             return false;
         }
         Empleado other = (Empleado) object;
-        if ((this.id == null && other.id != null) || (this.id != null && !this.id.equals(other.id))) {
+        if ((this.CODIGO_EMPLEADO == null && other.CODIGO_EMPLEADO != null) || (this.CODIGO_EMPLEADO != null && !this.CODIGO_EMPLEADO.equals(other.CODIGO_EMPLEADO))) {
             return false;
         }
         return true;
@@ -139,7 +147,7 @@ public class Empleado implements Serializable {
 
     @Override
     public String toString() {
-        return "com.proyecto.entidades.Empleado[ id=" + id + " ]";
+        return "com.proyecto.entidades.Empleado[ id=" + CODIGO_EMPLEADO + " ]";
     }
 
 }
