@@ -26,11 +26,11 @@ public class Empleado implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "CODIGO_EMPLEADO")
-    private Long CODIGO_EMPLEADO;
+    private int CODIGO_EMPLEADO;
     @Column(name = "CODIGO_PAIS")
-    private Long CODIGO_PAIS;
+    private int CODIGO_PAIS;
     @Column(name = "CODIGO_TIPDOC")
-    private Long CODIGO_TIPDOC;
+    private int CODIGO_TIPDOC;
     @Column(name = "NRO_DOC")
     private String NRO_DOC;
     @Column(name = "APELLIDO_PATERNO")
@@ -44,27 +44,27 @@ public class Empleado implements Serializable {
     @Column(name = "DOMICILIO")
     private String DOMICILIO;
 
-    public Long getCODIGO_EMPLEADO() {
+    public int getCODIGO_EMPLEADO() {
         return CODIGO_EMPLEADO;
     }
 
-    public void setCODIGO_EMPLEADO(Long CODIGO_EMPLEADO) {
+    public void setCODIGO_EMPLEADO(int CODIGO_EMPLEADO) {
         this.CODIGO_EMPLEADO = CODIGO_EMPLEADO;
     }
 
-    public Long getCODIGO_PAIS() {
+    public int getCODIGO_PAIS() {
         return CODIGO_PAIS;
     }
 
-    public void setCODIGO_PAIS(Long CODIGO_PAIS) {
+    public void setCODIGO_PAIS(int CODIGO_PAIS) {
         this.CODIGO_PAIS = CODIGO_PAIS;
     }
 
-    public Long getCODIGO_TIPDOC() {
+    public int getCODIGO_TIPDOC() {
         return CODIGO_TIPDOC;
     }
 
-    public void setCODIGO_TIPDOC(Long CODIGO_TIPDOC) {
+    public void setCODIGO_TIPDOC(int CODIGO_TIPDOC) {
         this.CODIGO_TIPDOC = CODIGO_TIPDOC;
     }
 
@@ -125,25 +125,7 @@ public class Empleado implements Serializable {
     }
     private String EMAIL;
 
-    @Override
-    public int hashCode() {
-        int hash = 0;
-        hash += (CODIGO_EMPLEADO != null ? CODIGO_EMPLEADO.hashCode() : 0);
-        return hash;
-    }
-
-    @Override
-    public boolean equals(Object object) {
-        // TODO: Warning - this method won't work in the case the id fields are not set
-        if (!(object instanceof Empleado)) {
-            return false;
-        }
-        Empleado other = (Empleado) object;
-        if ((this.CODIGO_EMPLEADO == null && other.CODIGO_EMPLEADO != null) || (this.CODIGO_EMPLEADO != null && !this.CODIGO_EMPLEADO.equals(other.CODIGO_EMPLEADO))) {
-            return false;
-        }
-        return true;
-    }
+    
 
     @Override
     public String toString() {
