@@ -26,17 +26,17 @@ public class Usuario implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "CODIGO_USUARIO")
-    private Long CODIGO_USUARIO;
+    private int CODIGO_USUARIO;
     @Column(name = "DESCRIPCION")
     private String DESCRIPCION;
     @Column(name = "FECHA_INGRESO")
     private Date FECHA_INGRESO;
 
-    public Long getCODIGO_USUARIO() {
+    public int getCODIGO_USUARIO() {
         return CODIGO_USUARIO;
     }
 
-    public void setCODIGO_USUARIO(Long CODIGO_USUARIO) {
+    public void setCODIGO_USUARIO(int CODIGO_USUARIO) {
         this.CODIGO_USUARIO = CODIGO_USUARIO;
     }
 
@@ -56,27 +56,6 @@ public class Usuario implements Serializable {
         this.FECHA_INGRESO = FECHA_INGRESO;
     }
     
-    
-   
-    @Override
-    public int hashCode() {
-        int hash = 0;
-        hash += (CODIGO_USUARIO != null ? CODIGO_USUARIO.hashCode() : 0);
-        return hash;
-    }
-
-    @Override
-    public boolean equals(Object object) {
-        // TODO: Warning - this method won't work in the case the id fields are not set
-        if (!(object instanceof Usuario)) {
-            return false;
-        }
-        Usuario other = (Usuario) object;
-        if ((this.CODIGO_USUARIO == null && other.CODIGO_USUARIO != null) || (this.CODIGO_USUARIO != null && !this.CODIGO_USUARIO.equals(other.CODIGO_USUARIO))) {
-            return false;
-        }
-        return true;
-    }
 
     @Override
     public String toString() {

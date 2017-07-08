@@ -25,17 +25,17 @@ public class Excepcion_Tasa implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "CODIGO_EXCEPCION")
-    private Long CODIGO_EXCEPCION;
+    private int CODIGO_EXCEPCION;
     @Column(name = "CODIGO_PERFIL")
-    private Long CODIGO_PERFIL;
+    private int CODIGO_PERFIL;
     @Column(name = "TASA_MINIMA")
     private double TASA_MINIMA;
 
-    public Long getCODIGO_PERFIL() {
+    public int getCODIGO_PERFIL() {
         return CODIGO_PERFIL;
     }
 
-    public void setCODIGO_PERFIL(Long CODIGO_PERFIL) {
+    public void setCODIGO_PERFIL(int CODIGO_PERFIL) {
         this.CODIGO_PERFIL = CODIGO_PERFIL;
     }
 
@@ -47,32 +47,12 @@ public class Excepcion_Tasa implements Serializable {
         this.TASA_MINIMA = TASA_MINIMA;
     }
 
-    public Long getCODIGO_EXCEPCION() {
+    public int getCODIGO_EXCEPCION() {
         return CODIGO_EXCEPCION;
     }
 
-    public void setCODIGO_EXCEPCION(Long CODIGO_EXCEPCION) {
+    public void setCODIGO_EXCEPCION(int CODIGO_EXCEPCION) {
         this.CODIGO_EXCEPCION = CODIGO_EXCEPCION;
-    }
-
-    @Override
-    public int hashCode() {
-        int hash = 0;
-        hash += (CODIGO_EXCEPCION != null ? CODIGO_EXCEPCION.hashCode() : 0);
-        return hash;
-    }
-
-    @Override
-    public boolean equals(Object object) {
-        // TODO: Warning - this method won't work in the case the CODIGO_EXCEPCION fields are not set
-        if (!(object instanceof Excepcion_Tasa)) {
-            return false;
-        }
-        Excepcion_Tasa other = (Excepcion_Tasa) object;
-        if ((this.CODIGO_EXCEPCION == null && other.CODIGO_EXCEPCION != null) || (this.CODIGO_EXCEPCION != null && !this.CODIGO_EXCEPCION.equals(other.CODIGO_EXCEPCION))) {
-            return false;
-        }
-        return true;
     }
 
     @Override
