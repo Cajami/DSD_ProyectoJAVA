@@ -37,9 +37,6 @@ public class EmpresaTest {
     public void tearDown() {
     }
 
-    /**
-     * Test of getCODIGO_EMPLEADO method, of class Empresa.
-     */
     @Test
     public void TestNuevaEmpresa() {
         System.out.println("TestNuevaEmpresa");

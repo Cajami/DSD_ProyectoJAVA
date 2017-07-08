@@ -25,15 +25,15 @@ public class Tip_Doc implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "CODITO_TIPDOC")
-    private Long CODITO_TIPDOC;
+    private int CODITO_TIPDOC;
     @Column(name = "DESCRIPCION")
     private String DESCRIPCION;
 
-    public Long getCODITO_TIPDOC() {
+    public int getCODITO_TIPDOC() {
         return CODITO_TIPDOC;
     }
 
-    public void setCODITO_TIPDOC(Long CODITO_TIPDOC) {
+    public void setCODITO_TIPDOC(int CODITO_TIPDOC) {
         this.CODITO_TIPDOC = CODITO_TIPDOC;
     }
 
@@ -45,25 +45,8 @@ public class Tip_Doc implements Serializable {
         this.DESCRIPCION = DESCRIPCION;
     }
 
-    @Override
-    public int hashCode() {
-        int hash = 0;
-        hash += (CODITO_TIPDOC != null ? CODITO_TIPDOC.hashCode() : 0);
-        return hash;
-    }
-
-    @Override
-    public boolean equals(Object object) {
-        // TODO: Warning - this method won't work in the case the id fields are not set
-        if (!(object instanceof Tip_Doc)) {
-            return false;
-        }
-        Tip_Doc other = (Tip_Doc) object;
-        if ((this.CODITO_TIPDOC == null && other.CODITO_TIPDOC != null) || (this.CODITO_TIPDOC != null && !this.CODITO_TIPDOC.equals(other.CODITO_TIPDOC))) {
-            return false;
-        }
-        return true;
-    }
+   
+   
 
     @Override
     public String toString() {

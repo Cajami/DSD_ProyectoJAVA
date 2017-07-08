@@ -12,10 +12,7 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
-/**
- *
- * @author USER
- */
+
 public class PaisTest {
     
     public PaisTest() {
@@ -37,9 +34,6 @@ public class PaisTest {
     public void tearDown() {
     }
 
-    /**
-     * Test of getDESCRIPCION method, of class Pais.
-     */
     @Test
     public void testNuevoPais() {
         System.out.println("testNuevoPais");

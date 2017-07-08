@@ -39,9 +39,7 @@ public class AprobacionTest {
     public void tearDown() {
     }
 
-    /**
-     * Test of getCODIGO_AUTORIZACION method, of class Aprobacion.
-     */
+  
     @Test
     public void testNuevaAprobacion() {
         Calendar fc_apr = Calendar.getInstance();

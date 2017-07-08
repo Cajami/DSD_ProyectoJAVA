@@ -25,7 +25,7 @@ public class Pais implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "CODIGO_PAIS")
-    private Long CODIGO_PAIS;
+    private int CODIGO_PAIS;
     @Column(name = "DESCRIPCION")
     private String DESCRIPCION;
 
@@ -37,34 +37,15 @@ public class Pais implements Serializable {
         this.DESCRIPCION = DESCRIPCION;
     }
 
-    public Long getCODIGO_PAIS() {
+    public int getCODIGO_PAIS() {
         return CODIGO_PAIS;
     }
 
-    public void setCODIGO_PAIS(Long CODIGO_PAIS) {
+    public void setCODIGO_PAIS(int CODIGO_PAIS) {
         this.CODIGO_PAIS = CODIGO_PAIS;
     }
 
-    @Override
-    public int hashCode() {
-        int hash = 0;
-        hash += (CODIGO_PAIS != null ? CODIGO_PAIS.hashCode() : 0);
-        return hash;
-    }
-
-    @Override
-    public boolean equals(Object object) {
-        // TODO: Warning - this method won't work in the case the CODIGO_PAIS fields are not set
-        if (!(object instanceof Pais)) {
-            return false;
-        }
-        Pais other = (Pais) object;
-        if ((this.CODIGO_PAIS == null && other.CODIGO_PAIS != null) || (this.CODIGO_PAIS != null && !this.CODIGO_PAIS.equals(other.CODIGO_PAIS))) {
-            return false;
-        }
-        return true;
-    }
-
+   
     @Override
     public String toString() {
         return "com.proyecto.entidades.Pais[ id=" + CODIGO_PAIS + " ]";

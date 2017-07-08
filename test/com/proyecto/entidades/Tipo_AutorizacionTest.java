@@ -39,9 +39,9 @@ public class Tipo_AutorizacionTest {
     public void testNuevoTipo_Autorizacion() {
         System.out.println("testNuevoTipo_Autorizacion");
         Tipo_Autorizacion tipo_autorizacion = new Tipo_Autorizacion();
-        String expResult = "";
+        int expResult = 0;
         tipo_autorizacion.setDESCRIPCION("APROBADO");
-        String result = tipo_autorizacion.getDESCRIPCION();
+        int result = tipo_autorizacion.getCODIGO_AUTORIZACION();
         assertEquals(expResult, result);
     }
 }

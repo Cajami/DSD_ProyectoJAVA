@@ -25,7 +25,7 @@ public class Perfil implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "CODIGO_PERFIL")
-    private Long CODIGO_PERFIL;
+    private int CODIGO_PERFIL;
     @Column(name = "DESCRIPCION")
     private String DESCRIPCION;
 
@@ -37,34 +37,15 @@ public class Perfil implements Serializable {
         this.DESCRIPCION = DESCRIPCION;
     }
 
-    public Long getCODIGO_PERFIL() {
+    public int getCODIGO_PERFIL() {
         return CODIGO_PERFIL;
     }
 
-    public void setCODIGO_PERFIL(Long CODIGO_PERFIL) {
+    public void setCODIGO_PERFIL(int CODIGO_PERFIL) {
         this.CODIGO_PERFIL = CODIGO_PERFIL;
     }
 
-    @Override
-    public int hashCode() {
-        int hash = 0;
-        hash += (CODIGO_PERFIL != null ? CODIGO_PERFIL.hashCode() : 0);
-        return hash;
-    }
-
-    @Override
-    public boolean equals(Object object) {
-        // TODO: Warning - this method won't work in the case the CODIGO_PERFIL fields are not set
-        if (!(object instanceof Perfil)) {
-            return false;
-        }
-        Perfil other = (Perfil) object;
-        if ((this.CODIGO_PERFIL == null && other.CODIGO_PERFIL != null) || (this.CODIGO_PERFIL != null && !this.CODIGO_PERFIL.equals(other.CODIGO_PERFIL))) {
-            return false;
-        }
-        return true;
-    }
-
+    
     @Override
     public String toString() {
         return "com.proyecto.entidades.Perfil[ id=" + CODIGO_PERFIL + " ]";

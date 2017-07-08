@@ -12,10 +12,7 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
-/**
- *
- * @author USER
- */
+
 public class PerfilTest {
     
     public PerfilTest() {
@@ -37,9 +34,7 @@ public class PerfilTest {
     public void tearDown() {
     }
 
-    /**
-     * Test of getDESCRIPCION method, of class Perfil.
-     */
+ 
     @Test
     public void testNuevoPerfil() {
         System.out.println("testNuevoPerfil");
